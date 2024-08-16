@@ -1,7 +1,7 @@
 package Singleton;
 
 public class Singleton {
-    static private Singleton color = null;
+    private static Singleton instance = null;
     private String bg;
     
     protected Singleton(){
@@ -9,10 +9,10 @@ public class Singleton {
     }
 
     public static Singleton Instance(){
-        if (color == null){
-            color = new Singleton();
+        if (instance == null){
+            instance = new Singleton();
         }
-        return color;
+        return instance;
     } 
 
     public void setBg(String bg){

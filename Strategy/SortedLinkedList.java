@@ -25,4 +25,10 @@ public class SortedLinkedList<T extends Comparable<T>> extends LinkedListStrateg
         // TODO Auto-generated method stub
         return new LinkedListIterator<T>(this);
     }
+
+    @Override
+    public Node<T> getHead() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getHead'");
+    }
 }
