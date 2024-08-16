@@ -18,11 +18,14 @@ function Single:setColor(color)
 end
 
 function Single:getColor()
-  return color
+  return self.color
 end
 
 inst = Single:Instance()
-print(inst.color)
 inst2 = Single:Instance()
+
 inst:setColor("blue")
-print(inst2.color)
+print("inst2: "..inst2:getColor())
+
+inst2:setColor("red")
+print("inst: "..inst:getColor())
