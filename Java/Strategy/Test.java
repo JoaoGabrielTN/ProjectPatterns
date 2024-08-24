@@ -1,16 +1,22 @@
 package Strategy;
-import Iterator.LinkedListIterator;
+
+import Strategy.ConcreteStrategies.LinkedList;
+import Strategy.ConcreteStrategies.SortedLinkedList;
 
 public class Test {
     public static void main(String[] args) {
-        LinkedList<Integer> lista = new LinkedList<>();
+        LinkedListStrategy<Integer> lista = new LinkedList<>();
+        LinkedListStrategy<Integer> listaOrdenada = new SortedLinkedList<>();
+        
         lista.insert(10);
         lista.insert(20);
         lista.insert(30);
+        lista.show();
 
-        LinkedListIterator<Integer> iterator = lista.createIterator();
-        while (iterator.Next()) {
-            System.out.println(iterator.currentItem());
-        }
+        listaOrdenada.insert(20);
+        listaOrdenada.insert(10);
+        listaOrdenada.insert(30);
+        listaOrdenada.insert(15);
+        listaOrdenada.show();
     }
 }
