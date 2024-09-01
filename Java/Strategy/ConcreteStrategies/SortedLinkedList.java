@@ -41,9 +41,4 @@ public class SortedLinkedList<T extends Comparable<T>> extends LinkedListStrateg
             newNode.setPrevious(prev);
         }
     }
-
-    @Override
-    public Node<T> getHead() {
-        return this.head;
-    }
 }

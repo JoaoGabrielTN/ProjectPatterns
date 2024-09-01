@@ -3,7 +3,10 @@ package Strategy;
 abstract public class LinkedListStrategy <T extends Comparable<T>>{
     protected Node<T> head;
     abstract public void insert(T value);
-    abstract public Node<T> getHead();
+
+    public Node<T> getHead() {
+        return this.head;
+    }
     public void show(){
         Node<T> currNode = this.head;
         while (currNode != null) {
